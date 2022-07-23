@@ -23,6 +23,8 @@ console.log(typeof guess,guess);
       displaymess('Congagulations 👍');
       document.querySelector('body').style.backgroundColor="#60b347"
       document.querySelector('.number').style.width="30rem";
+      document.querySelector('.number').textContent=secretNumber;
+      console.log(secretNumber)
       if(highscore<score){
          highscore=score;
          document.querySelector('.highscore').textContent=score;
@@ -44,7 +46,7 @@ document.querySelector('.again').addEventListener('click',function(){
    document.querySelector('.score').textContent=score;
    secretNumber=Math.floor(Math.random()*20)+1;
   
-   number('?')
+   document.querySelector('.number').textContent="?"
    document.querySelector('.guess').value='';
    displaymess('Start guessing...')
 })
